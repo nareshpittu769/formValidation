@@ -1,7 +1,7 @@
 function validatelogin(){
     var user = false
     var password = false
-    let data = localStorage.getItem('formdata')
+    let data = JSON.parse(localStorage.getItem('formdata')) 
     data.forEach(obj => {
         if ((obj.username == document.getElementById('uname').value)){
             user = true

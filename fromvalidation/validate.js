@@ -76,8 +76,7 @@ function show(){
     }
 }
 
-
- function validate(){
+function validateform(){
     let uname = document.getElementById('uname').value
     let emailid = document.getElementById('emailid').value
     let pwd = document.getElementById('pwd').value
@@ -111,13 +110,15 @@ function show(){
         cpwderror.style.color = 'red'
         cpwd.style.border = '2px solid red'
     }
-    let data = JSON.parse(localStorage.getItem('formdata')) 
+    
+    let data = JSON.parse(localStorage.getItem('formdata')) || [];
     var user = false
-    var email = false
+    var email = false;
     data.forEach(obj => {
         if ((obj.username == document.getElementById('uname').value)){
             user = true
-        }else if(obj.emailid == document.getElementById('emailid').value){
+        }
+        if((obj.emailid == document.getElementById('emailid').value)){
             email = true
         }
 
@@ -133,20 +134,21 @@ function show(){
         emerror.style.color = 'red'
     }
     else{
+
         let formdata = JSON.parse(localStorage.getItem('formdata')) || [];
         formdata.push({
             username:uname,
             emailid :emailid,
             password:pwd
-        })
-        localStorage.setItem('formdata',JSON.stringify(formdata))
+        });
+        localStorage.setItem('formdata',JSON.stringify(formdata));
 
         document.getElementById('uname').value = ''
         document.getElementById('emailid').value = ''
         document.getElementById('pwd').value =''
-        document.getElementById('cpwd').value =''
-        alert('Account Created')
-    }
+        document.getElementById('cpwd').value ='';
+        alert('Account Created');
+    };
     
     event.preventDefault()
 }
