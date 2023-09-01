@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./form.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a34bc60080.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form">
+            <h1>Sign Up Here</h1>
+            <form action="#" method="post" class="form-data" autocomplete="on">
+                <div id="userName">
+                    <label for="uname">User Name :</label><br>
+                    <input type="text" name="uname" id="uname" placeholder="Username" onkeydown="uvalidate()">
+                    <span id="uerror"></span>
+                </div>
+                <div id="email">
+                    <label for="emailid">Email :</label><br>
+                    <input type="email" name="emailid" id="emailid" placeholder="Email" onkeydown="evalidate()">
+                    <span id="emerror"></span>
+                </div>
+                <div id="password">
+                    <label for="pwd">Password :</label><br>
+                    <input type="password" name="pwd" id="pwd" placeholder="Password" onkeydown="pvalidate()" oninput="lenvalidate()">
+                    <i class="fa-solid fa-eye" onclick="show()"></i><span id="pwderror"></span>
+                </div>
+                <div id="conpassword">
+                    <label for="cpwd">Confirm Password :</label><br>
+                    <input type="password" name="cpwd" id="cpwd" placeholder="Confirm Password" oninput="cpvalidate()">
+                    <span id="cpwderror"></span>
+                </div>
+                <button type="submit" id="submit" onclick="validate()">Sign Up</button>
+            </form>
+            <p>*If you already a user login here <a href="./login.htm">Login</a></p>
+        </div>
+    </div>
+    <script src="./validate.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./user.png" type="image/x-icon">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form">
+            <h1>Login Here</h1>
+            <form action="#" class="form-data" autocomplete="on">
+                <div id="userName">
+                    <label for="uname">User Name :</label><br>
+                    <input type="text" name="uname" id="uname" placeholder="Username">
+                    <span id="uerror"></span>
+                </div>
+                <div id="password">
+                    <label for="pwd">Password :</label><br>
+                    <input type="password" name="pwd" id="pwd" placeholder="Password">
+                    <span id="pwderror"></span>
+                </div>
+                <button type="submit" id="submit" onclick="validatelogin()">Login</button>
+            </form>
+            <p>*If you are a new user signUp here <a href="./index.htm">signUp</a></p>
+
+        </div>
+      
+    </div>
+    <script src="./login.js"></script>
+</body>
+</html>
