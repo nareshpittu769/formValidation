@@ -19,11 +19,20 @@ function validatelogin(){
             let emerror = document.getElementById('pwderror')
             emerror.innerHTML = 'Incorrect!';
             emerror.style.color = 'red'
+            setTimeout(() => {
+                emerror.innerHTML = '';
+                emerror.style.color = 'none'
+            }, 3000);
+
         }
     }else{
         let uerror = document.getElementById('uerror')
         uerror.innerHTML = 'Incorrect user'
         uerror.style.color = 'red'
+        setTimeout(() => {
+            uerror.innerHTML = '';
+            uerror.style.color = 'none'
+        }, 3000);
     }
 
     event.preventDefault()
